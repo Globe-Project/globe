@@ -24,6 +24,9 @@ extern unsigned int dgpMaxProtoMsgLength;
 extern unsigned int dgpMaxTxSigOps;
 
 static const int MAX_TRANSACTION_BASE_SIZE = 1000000;
+
+static const int COINBASE_MATURITY = 8;
+static const int COINBASE_MATURITY_2 = 100;
 static const int WITNESS_SCALE_FACTOR = 4;
 
 static const size_t MIN_TRANSACTION_WEIGHT = WITNESS_SCALE_FACTOR * 60; // 60 is the lower bound for the size of a valid serialized CTransaction

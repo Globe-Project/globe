@@ -185,7 +185,7 @@ public:
         };
 
         consensus.nBlocktimeDownscaleFactor = 4;
-        consensus.nCoinbaseMaturity = 500;
+        consensus.nCoinbaseMaturity = 8;
         consensus.nRBTCoinbaseMaturity = consensus.nBlocktimeDownscaleFactor*500;
         consensus.nSubsidyHalvingIntervalV2 = consensus.nBlocktimeDownscaleFactor*985500; // qtum halving every 4 years (nSubsidyHalvingInterval * nBlocktimeDownscaleFactor)
 
