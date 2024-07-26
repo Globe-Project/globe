@@ -80,9 +80,9 @@ public:
         consensus.BIP34Hash = uint256S("0x000075aef83cf2853580f8ae8ce6f8c3096cfa21d98334d6e3f95e5582ed986c");
         consensus.BIP65Height = 0; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
         consensus.BIP66Height = 0; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
-        consensus.CSVHeight = 6048; // 000000000000000004a1b34462cb8aeebd5799177f7a29cf28f2d1961716b5b5
-        consensus.SegwitHeight = 6048; // 0000000000000000001c8018d9cb3b742ef25114f27563e3fc4a1902167f9893
-        consensus.MinBIP9WarningHeight = 8064; // segwit activation height + miner confirmation window
+        consensus.CSVHeight = consensus.BIP34Height; // 000000000000000004a1b34462cb8aeebd5799177f7a29cf28f2d1961716b5b5
+        consensus.SegwitHeight = consensus.BIP34Height; // 0000000000000000001c8018d9cb3b742ef25114f27563e3fc4a1902167f9893
+        consensus.MinBIP9WarningHeight = consensus.BIP34Height; // segwit activation height + miner confirmation window
         consensus.QIP5Height = 466600;
         consensus.QIP6Height = 466600;
         consensus.QIP7Height = 466600;
@@ -156,7 +156,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
-        bech32_hrp = "qc";
+        bech32_hrp = "glb";
 
         vFixedSeeds = std::vector<uint8_t>(std::begin(chainparams_seed_main), std::end(chainparams_seed_main));
 
@@ -170,18 +170,6 @@ public:
         checkpointData = {
             {
                 { 0, uint256S("0x000075aef83cf2853580f8ae8ce6f8c3096cfa21d98334d6e3f95e5582ed986c")},
-                { 5000, uint256S("0x00006a5338e5647872bd91de1d291365e941e14dff1939b5f16d1804d1ce61cd")}, //last PoW block
-                { 45000, uint256S("0x060c6af680f6975184c7a17059f2ff4970544fcfd4104e73744fe7ab7be14cfc")},
-                { 90000, uint256S("0x66fcf426b0aa6f2c9e3330cb2775e9e13c4a2b8ceedb50f8931ae0e12078ad50")},
-                { 245000, uint256S("0xed79607feeadcedf5b94f1c43df684af5106e79b0989a008a88f9dc2221cc12a")},
-                { 353000, uint256S("0xd487896851fed42b07771f950fcc4469fbfa79211cfefed800f6d7806255e23f")},
-                { 367795, uint256S("0x1209326b73e38e44ec5dc210f51dc5d8c3494e9c698521032dd754747d4c1685")},
-                { 445709, uint256S("0x814e7d91aac6c577e4589b76918f44cf80020212159d39709fbad3f219725c9f")},
-                { 498000, uint256S("0x497f28fd4b1dadc9ff6dd2ac771483acfd16e4c4664eb45d0a6008dc33811418")},
-                { 708000, uint256S("0x23c66194def65cfea20d32a71f23807a93a0b207b3d7251246e2c351204fe9d3")},
-                { 888000, uint256S("0x02caf7a26b995e5054462715a4d31e1a7ff220c53fead7c06de720ac54510433")},
-                { 1405000, uint256S("0x8ef924fb7d2a28e0420c8731fb34301c204d15fe8d1e68461e5ebe959df011f2")},
-                { 1883974, uint256S("0xefe5b66cd0963b19ed64850884f039ff4d98c49cd63b9ec763d5c336619d5a6d")},
             }
         };
 
@@ -191,9 +179,9 @@ public:
 
         chainTxData = ChainTxData{
             // Data as of block 2250aa6ed692895f7d3a7840e37bdc383584f18e0c7a9e7982521f9b47d6fd6c (height 1885982)
-            .nTime    = 1653074852, // * UNIX timestamp of last known number of transactions
-            .nTxCount = 7579431, // * total number of transactions between genesis and that timestamp
-            .dTxRate  = 0.07127920937539545, // * estimated number of transactions per second after that timestamp
+            .nTime    = 0, // * UNIX timestamp of last known number of transactions
+            .nTxCount = 0, // * total number of transactions between genesis and that timestamp
+            .dTxRate  = 0.0, // * estimated number of transactions per second after that timestamp
         };
 
         consensus.nBlocktimeDownscaleFactor = 4;
@@ -201,7 +189,7 @@ public:
         consensus.nRBTCoinbaseMaturity = consensus.nBlocktimeDownscaleFactor*500;
         consensus.nSubsidyHalvingIntervalV2 = consensus.nBlocktimeDownscaleFactor*985500; // qtum halving every 4 years (nSubsidyHalvingInterval * nBlocktimeDownscaleFactor)
 
-        consensus.nLastPOWBlock = 5000;
+        consensus.nLastPOWBlock = 5000; //TODO: This should be roughly a year after launch.
         consensus.nLastBigReward = 5000;
         consensus.nMPoSRewardRecipients = 10;
         consensus.nFirstMPoSBlock = consensus.nLastPOWBlock + 
