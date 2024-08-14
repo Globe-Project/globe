@@ -228,7 +228,6 @@ BITCOIN_CORE_H = \
   policy/fees_args.h \
   policy/packages.h \
   policy/policy.h \
-  policy/rbf.h \
   policy/settings.h \
   pow.h \
   pos.h \
@@ -294,7 +293,6 @@ BITCOIN_CORE_H = \
   util/moneystr.h \
   util/overflow.h \
   util/overloaded.h \
-  util/rbf.h \
   util/readwritefile.h \
   util/result.h \
   util/serfloat.h \
@@ -431,7 +429,6 @@ libbitcoin_node_a_SOURCES = \
   policy/fees.cpp \
   policy/fees_args.cpp \
   policy/packages.cpp \
-  policy/rbf.cpp \
   policy/settings.cpp \
   pow.cpp \
   rest.cpp \
@@ -914,7 +911,6 @@ libqtum_util_a_SOURCES = \
   util/system.cpp \
   util/message.cpp \
   util/moneystr.cpp \
-  util/rbf.cpp \
   util/readwritefile.cpp \
   util/settings.cpp \
   util/thread.cpp \

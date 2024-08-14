@@ -29,7 +29,6 @@
 #include <node/utxo_snapshot.h>
 #include <node/transaction.h>
 #include <policy/policy.h>
-#include <policy/rbf.h>
 #include <policy/settings.h>
 #include <pow.h>
 #include <pos.h>
@@ -50,7 +49,6 @@
 #include <util/check.h> // For NDEBUG compile time check
 #include <util/hasher.h>
 #include <util/moneystr.h>
-#include <util/rbf.h>
 #include <util/strencodings.h>
 #include <util/system.h>
 #include <util/time.h>

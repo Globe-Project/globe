@@ -7,7 +7,6 @@
 #include <policy/fees.h>
 #include <policy/policy.h>
 #include <util/moneystr.h>
-#include <util/rbf.h>
 #include <util/system.h>
 #include <util/translation.h>
 #include <wallet/coincontrol.h>
@@ -36,16 +35,6 @@ static feebumper::Result PreconditionChecks(const CWallet& wallet, const CWallet
 
     if (wallet.GetTxDepthInMainChain(wtx) != 0) {
         errors.push_back(Untranslated("Transaction has been mined, or is conflicted with a mined transaction"));
-        return feebumper::Result::WALLET_ERROR;
-    }
-
-    if (!SignalsOptInRBF(*wtx.tx)) {
-        errors.push_back(Untranslated("Transaction is not BIP 125 replaceable"));
-        return feebumper::Result::WALLET_ERROR;
-    }
-
-    if (wtx.mapValue.count("replaced_by_txid")) {
-        errors.push_back(strprintf(Untranslated("Cannot bump transaction %s which was already bumped by transaction %s"), wtx.GetHash().ToString(), wtx.mapValue.at("replaced_by_txid")));
         return feebumper::Result::WALLET_ERROR;
     }
 
