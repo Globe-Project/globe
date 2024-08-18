@@ -1,20 +1,31 @@
-What is Qtum?
+What is Globe?
 -------------
 
-Qtum is a decentralized blockchain project built on Bitcoin's UTXO model, with support for Ethereum Virtual Machine based smart contracts, and secured by a proof of stake consensus model. It achieves this through the revolutionary Account Abstraction Layer which allows the EVM to communicate with Qtum's Bitcoin-like UTXO blockchain. For more general information about Qtum as well as links to join our community, go to https://qtum.org
+Globe is a decentralized blockchain project built on Bitcoin's UTXO model, with support for Ethereum Virtual Machine based smart contracts, and secured by a proof of stake consensus model. Globe combines robust architecture with enhanced privacy features. For more general information about Qtum as well as links to join our community, go to https://globeproject.org
+
 
 Welcome to the Qtum Fastlane Main Network. This is the main network where the tokens hold value and should be guarded very carefully. If you are testing the network, or developing unstable software on Qtum, we highly recommend using either testnet or regtest mode. 
 
-The major features of the Qtum network include:
+The major features of the Globe network include:
 
-1. Compatibility with the Ethereum Virtual Machine, which allows for compatibility with most existing Solidity based smart contracts. No special solidity compiler is required to deploy your smart contract to Qtum. 
-2. A Proof of Stake consensus system which is optimized for Qtum's contract model. Any user can stake and help to secure the network. There is no voting, master nodes, or minimum amount required. There have been transactions as small as 2 Qtum that have created blocks in the past. Staking from smart contracts is under development.
-3. The Decentralized Governance Protocol is completely implemented and functional, which allows certain network parameters to be modified without a fork or other network disruption. This currently controls parameters like block size, gas prices, etc. 
-4. Uses the UTXO transaction model and is compatible with Bitcoin, allowing for existing tooling and workflows to be used with Qtum. This allows for the infamous SPV protocol to be used which is ideal for light wallets on mobile phones and IoT devices.
+1. Smart Contract Compatibility
+Fully compatible with a virtual machine that enables the deployment and execution of Solidity-based smart contracts without modification.
+Easy migration of existing contracts due to seamless compatibility with standard development tools.
+2. Proof of Stake (PoS) Consensus
+Secure and energy-efficient Proof of Stake consensus mechanism.
+Open staking participation without requiring a minimum balance.
+Optimized for decentralized contract execution and network security.
+3. Enhanced Privacy Features
+Confidential Transactions: Transactions are obfuscated to prevent tracking of amounts and participants.
+Stealth Addresses: Enable anonymous receipt of funds by generating one-time addresses for each transaction.
+4. Decentralized Governance
+Dynamic network parameters adjustment without forks or network disruption.
+Governing parameters such as block size, gas prices, and other operational elements are community-controlled.
+5. UTXO Transaction Model
+Employs the UTXO model for secure and efficient transactions.
+Compatible with lightweight clients, allowing for efficient transactions on mobile and IoT devices.
 
-Note: Qtum Core is considered beta software. We make no warranties or guarantees of its security or stability.
-
-Qtum Documentation and Usage Resources
+Globe Documentation and Usage Resources
 ---------------
 
 These are some resources that might be helpful in understanding Qtum.
@@ -64,30 +75,30 @@ Developer's Tools
   * https://github.com/qtumproject/qtuminfo-api#qtuminfo-api-documentation
 
 
-What is Qtum Core?
+What is Globe Core?
 ------------------
 
-Qtum Core is our primary mainnet wallet. It implements a full node and is capable of storing, validating, and distributing all history of the Qtum network. Qtum Core is considered the reference implementation for the Qtum network. 
+Globe Core is our primary mainnet wallet. It implements a full node and is capable of storing, validating, and distributing all history of the Globe network. Qtum Core is considered the reference implementation for the Globe network. 
 
-Qtum Core currently implements the following:
+Glboe Core currently implements the following:
 
-* Sending/Receiving QTUM coins
-* Sending/Receiving QRC20 tokens on the Qtum network
-* Staking and creating blocks for the Qtum network
+* Sending/Receiving GLOBE
+* Sending/Receiving GRC20 tokens on the Globe network
+* Staking and creating blocks for the Globe network
 * Creating and interacting with smart contracts
 * Running a full node for distributing the blockchain to other users
 * "Prune" mode, which minimizes disk usage
-* Regtest mode, which enables developers to very quickly build their own private Qtum network for Dapp testing
-* Testnet mode, using the public Qtum Testnet, with faucet available
+* Regtest mode, which enables developers to very quickly build their own private Globe network for Dapp testing
+* Testnet mode, using the public Globe Testnet, with faucet available
 * Compatibility with the Bitcoin Core set of RPC commands and APIs
 * Full SegWit capability with p2sh-segwit (legacy) and bech32 (native) addresses
 
 Alternative Wallets
 -------------------
 
-Qtum Core uses a full node model, and thus requires downloading the entire blockchain. If you do not need the entire blockchain, and do not intend on developing smart contracts, it may be more ideal to use an alternative wallet such as one of our light wallets that can be synchronized in a matter of seconds. 
+Globe Core uses a full node model, and thus requires downloading the entire blockchain. If you do not need the entire blockchain, and do not intend on developing smart contracts, it may be more ideal to use an alternative wallet such as one of our light wallets that can be synchronized in a matter of seconds. 
 
-### Qtum Web Wallet
+### Globe Web Wallet
 
 A browser wallet that supports the Ledger hardware wallet, offline cold wallet, restoration from mobile wallets, creation of QRC20 tokens and QRC1155 NFTs.
 
