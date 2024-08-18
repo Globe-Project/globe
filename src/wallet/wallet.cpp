@@ -34,7 +34,6 @@
 #include <util/fs.h>
 #include <util/fs_helpers.h>
 #include <util/moneystr.h>
-#include <util/rbf.h>
 #include <util/string.h>
 #include <util/system.h>
 #include <util/convert.h>
