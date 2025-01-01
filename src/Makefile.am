@@ -199,6 +199,7 @@ BITCOIN_CORE_H = \
   kernel/validation_cache_sizes.h \
   key.h \
   key_io.h \
+  limitedmap.h \
   logging.h \
   logging/timer.h \
   mapport.h \
@@ -284,7 +285,6 @@ BITCOIN_CORE_H = \
   txdb.h \
   txmempool.h \
   txorphanage.h \
-  txrequest.h \
   undo.h \
   util/asmap.h \
   util/bip32.h \
@@ -398,6 +398,7 @@ libbitcoin_node_a_SOURCES = \
   blockfilter.cpp \
   chain.cpp \
   consensus/tx_verify.cpp \
+  dandelion.cpp \
   dbwrapper.cpp \
   deploymentstatus.cpp \
   flatfile.cpp \
@@ -469,7 +470,6 @@ libbitcoin_node_a_SOURCES = \
   txdb.cpp \
   txmempool.cpp \
   txorphanage.cpp \
-  txrequest.cpp \
   validation.cpp \
   validationinterface.cpp \
   versionbits.cpp \
